@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Cesar Joel González Oliva">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizz</title>
+    <link rel="stylesheet" href="./dist/main.css">
+</head>
+
+<body class="bg-black px-2">
+    <video src="./assets/videos/anime_fondo.mp4" class="absolute inset-0 all-screen object-cover -z-10" autoplay loop
+        muted></video>
+
+    <main class="all-screen z-20 p-5 center-all sm:w-2/3 sm:mx-auto" id="container-begining">
+        <form class="bg-[#c095db78] text-center p-8 rounded-xl" id="frm-info" autocomplete="off">
+            <h1 class="text-white font-black text-4xl">Quizz Anime</h1>
+            <p class="text-white fontb-bold text-2xl my-6">Ponte aprueba y averigua cuanto sabes de anime</p>
+            <div class="grid grid-cols-12 sm:gap-2 items-center">
+                <div class="col-span-12 pb-2 sm:col-span-5 sm:text-left">
+                    <label for="txt-name" class="span-text">Ingrese su nombre</label>
+                </div>
+                <div class="col-span-12 sm:col-span-7">
+                    <input name="txtName" placeholder="Name" class="input placeholder:text-gray-200" type="input" required>
+                </div>
+
+                <div class="col-span-12 mt-4 sm:mt-0 pb-2 sm:col-span-5 sm:text-left">
+                    <label for="cmb-no-questions" class="span-text">Cantidad de preguntas</label>
+                </div>
+                <div class="col-span-12 sm:col-span-7">
+                    <select name="noQuestions" id="cmb-no-questions" class="input">
+                        <option value="10">10</option>
+                        <option value="15">15</option>
+                        <option value="20">20</option>
+                    </select>
+                </div>
+
+                <div class="col-span-12 pt-4">
+                    <button
+                        class="btn-primary bg-purple-800 text-white hover:bg-white hover:border-purple-900 hover:text-purple-800"
+                        id="btn-start" type="submit">Iniciar</button>
+                </div>
+            </div>
+
+
+        </form>
+    </main>
+
+    <section class="hidden all-screen mx-auto max-w-md sm:max-w-none sm:w-3/5 sm:min-w-[450px] py-1 px-2 lg:w-5/12 mt-3"
+        id="container-questions">
+        <article id="questions">
+
+        </article>
+        <article class="w-full py-6">
+            <button id="btn-change-question"
+                class="btn-primary block mx-auto w-full min-w-fit sm:w-1/2 bg-blue-900 hover:bg-blue-800 text-white font-bold text-xl sm:text-2xl">Siguiente</button>
+        </article>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js/index.js" type="module"></script>
+</body>
+
+</html>
