@@ -802,6 +802,12 @@ video {
   background-color: #c095db78;
 }
 
+.bg-body-picture {
+  background: url(./../assets/images/fondo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
